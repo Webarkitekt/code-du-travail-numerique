@@ -37,6 +37,15 @@ const glossaryBySlug = glossary.reduce(
   {}
 );
 
+const ignoreGlossary = [
+  "convention collective",
+  "conventions collectives",
+  "accords de branches",
+  "accord de branche",
+  "disposition conventionnelle",
+  "dispositions conventionnelles",
+];
+
 const Portal = ({ node, children }) => {
   if (!node) return null;
 
@@ -80,18 +89,42 @@ export default function useGlossary(children, html) {
           )
           .concat(item.abbrs ? new RegExp(`\\b(${item.abbrs})\\b`, "g") : []);
 
-        patterns.forEach((pattern) => {
-          // we use an internal ref counter to track pattern replacement
-          node.innerHTML = node.innerHTML.replace(pattern, function (_, term) {
-            const internalRef = `__tt__${refCounter++}`;
-            internalRefMap.set(internalRef, { slug: item.slug, term });
-            return _.replace(
-              new RegExp(term),
-              `<span data-tooltip-ref="${internalRef}"></span>`
+      glossary
+        .filter(({ title }) => !ignoreGlossary.includes(title.toLowerCase()))
+        .forEach((item) => {
+          // we cannot use \b word boundary since \w does not match diacritics
+          // So we do a kind of \b equivalent.
+          // the main différence is that matched pattern can include a whitespace as first char
+          const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
+          const wordBoundaryStart = `(?:^|[^_/\\w${frDiacritics}-])`;
+          const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
+          const patterns = [...new Set([item.title, ...item.variants])]
+            .map(
+              (term) =>
+                new RegExp(
+                  `${wordBoundaryStart}(${term})${wordBoundaryEnd}`,
+                  "gi"
+                )
+            )
+            .concat(
+              item.abbrs.map((abbr) => new RegExp(`\\b(${abbr})\\b`, "g"))
             );
+
+          patterns.forEach((pattern) => {
+            // we use an internal ref counter to track pattern replacement
+            node.innerHTML = node.innerHTML.replace(pattern, function (
+              _,
+              term
+            ) {
+              const internalRef = `__tt__${refCounter++}`;
+              internalRefMap.set(internalRef, { slug: item.slug, term });
+              return _.replace(
+                new RegExp(term),
+                `<span data-tooltip-ref="${internalRef}"></span>`
+              );
+            });
           });
         });
-      });
       return state.concat(
         Array.from(node.querySelectorAll("[data-tooltip-ref]")).map((node) => {
           const { slug, term } = internalRefMap.get(
