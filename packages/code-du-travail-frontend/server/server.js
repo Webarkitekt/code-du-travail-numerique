@@ -70,6 +70,7 @@ nextApp.prepare().then(() => {
             "https://www.googletagmanager.com",
             "*.fabrique.social.gouv.fr",
             "https://cdnjs.cloudflare.com",
+            "https://cdn.jsdelivr.net",
             "https://unpkg.com",
           ],
           frameSrc: [
