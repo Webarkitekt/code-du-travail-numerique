@@ -44,6 +44,8 @@ const ignoreGlossary = [
   "accord de branche",
   "disposition conventionnelle",
   "dispositions conventionnelles",
+  "jours ouvrables",
+  "congés payés",
 ];
 
 const Portal = ({ node, children }) => {

@@ -65,7 +65,7 @@ function Answer({
             </Article>
           )}
           {additionalContent}
-          {/* glossaryItems */}
+          {html}
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}
