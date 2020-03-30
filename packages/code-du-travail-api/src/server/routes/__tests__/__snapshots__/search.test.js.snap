@@ -329,10 +329,10 @@ Object {
           "slug": "/themes/81-demission",
         },
       ],
-      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
-      "slug": "la-demission#Comment-presenter-une-demission",
+      "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
-      "title": "La démission : comment présenter une démission ?",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
     Object {
       "_score": 1.2302384,
@@ -402,14 +402,58 @@ Object {
           "slug": "/themes/8-depart-de-lentreprise",
         },
         Object {
-          "label": "Démission",
-          "slug": "/themes/81-demission",
+          "label": "Licenciement",
+          "slug": "/themes/84-licenciement",
         },
       ],
-      "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
-      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+      "description": "Estimez simplement le montant de l’indemnité de licenciement",
+      "slug": "indemnite-licenciement",
+      "source": "outils",
+      "title": "Indemnité de licenciement",
+    },
+    Object {
+      "_score": 1.2618562,
+      "algo": "semantic",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Embauche et contrat de travail",
+          "slug": "/themes/1-embauche-et-contrat-de-travail",
+        },
+        Object {
+          "label": "Embauche",
+          "slug": "/themes/11-embauche",
+        },
+        Object {
+          "label": "Période d'essai",
+          "slug": "/themes/113-periode-dessai",
+        },
+      ],
+      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
+      "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
+      "source": "modeles_de_courriers",
+      "title": "Rupture de période d’essai à l'initiative de l'employeur",
+    },
+    Object {
+      "_score": 1.141616,
+      "algo": "semantic",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Rupture conventionnelle",
+          "slug": "/themes/83-rupture-conventionnelle",
+        },
+        Object {
+          "label": "Rupture conventionnelle individuelle",
+          "slug": "/themes/831-rupture-conventionnelle-individuelle",
+        },
+      ],
+      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
+      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
+      "source": "modeles_de_courriers",
+      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     },
   ],
   "themes": Array [
