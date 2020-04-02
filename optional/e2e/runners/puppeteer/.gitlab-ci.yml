@@ -30,17 +30,17 @@ E2E Test @optional/e2e.runner.puppeteer:
     expire_in: 1 week
     when: always
     paths:
-      - optional/e2e/.runners/puppeteer/output
+      - optional/e2e/runners/puppeteer/output
   only:
     variables:
       - $E2E_TEST
   cache:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:
-      - optional/e2e/.runners/puppeteer/node_modules
+      - optional/e2e/runners/puppeteer/node_modules
       - $CI_PROJECT_DIR/.yarn
   before_script:
-    - cd ./optional/e2e/.runners/puppeteer
+    - cd ./optional/e2e/runners/puppeteer
   script:
     - yarn config set cache-folder $CI_PROJECT_DIR/.yarn
     - yarn --frozen-lockfile
