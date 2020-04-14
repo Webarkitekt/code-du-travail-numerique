@@ -3158,6 +3158,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 >
                   <span
 <<<<<<< HEAD
+<<<<<<< HEAD
                     class="sc-fznYue c40"
 =======
 <<<<<<< HEAD
@@ -3166,6 +3167,9 @@ exports[`<Answer /> should renders related content 1`] = `
                     class="sc-fzokvW c40"
 >>>>>>> test:Updated snapshotes
 >>>>>>> test:Updated snapshotes
+=======
+                    class="sc-fznYue c40"
+>>>>>>> test:Updated snapshot
                   >
                     Outils
                   </span>
