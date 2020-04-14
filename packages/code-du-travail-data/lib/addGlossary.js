@@ -2,6 +2,8 @@ const glossary = require("../dataset/datafiller/glossary.data.json");
 
 function execOne(htmlContent, { abbrs, title, definition, variants }) {
   let htmlFormat = htmlContent;
+  if (!htmlContent) return htmlFormat;
+
   const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
   const wordBoundaryStart = `(?:^|[^_/\\w${frDiacritics}-])`;
   const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
@@ -13,16 +15,13 @@ function execOne(htmlContent, { abbrs, title, definition, variants }) {
     .concat(abbrs.map((abbr) => new RegExp(`\\b(${abbr})\\b`, "g")));
 
   patterns.forEach((pattern) => {
-    if (htmlContent.match(pattern)) {
-      htmlFormat = htmlContent.replace(pattern, function (_, term) {
-        return _.replace(
-          new RegExp(term),
-          `<webcomponent-tooltip text="${term}" content="${definition}"></webcomponent-tooltip>`
-        );
-      });
-    }
+    htmlFormat = htmlContent.replace(pattern, function (_, term) {
+      return _.replace(
+        new RegExp(term),
+        `<webcomponent-tooltip content="${definition}">${term}</webcomponent-tooltip>`
+      );
+    });
   });
-
   return htmlFormat;
 }
 
