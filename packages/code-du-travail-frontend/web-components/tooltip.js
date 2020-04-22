@@ -30,12 +30,6 @@ class WebComponentsTooltip extends LitElement {
         text-size-adjust: 100%;
         -webkit-font-smoothing: antialiased;
       }
-      .tooltip:hover {
-        -webkit-animation-play-state: paused;
-      }
-      .tooltip:hover .content {
-        visibility: visible;
-      }
       .tooltip .content {
         left: 50%;
         position: absolute;
@@ -52,6 +46,9 @@ class WebComponentsTooltip extends LitElement {
         border: #bbcadf;
         box-shadow: #7994d4;
         pointer-events: none;
+      }
+      .tooltip:hover .content {
+        visibility: visible;
       }
     `;
   }
