@@ -22,8 +22,8 @@ Quand("je recherche {string}", (searchText) => {
   I.fillField("q", searchText);
 });
 
-Quand("je renseigne {string} dans le champ {string}", (text, input) => {
-  I.click(input);
+Quand("je renseigne {string} dans le champ {string}", async (text, input) => {
+  I.resetInputFocus(input);
   I.fillField(input, text);
 });
 
@@ -85,8 +85,11 @@ Alors("le lien {string} pointe sur {string}", (text, url) => {
   );
 });
 
-Alors("je vois {string} fois {string}", (num, text) => {
-  I.seeNumberOfVisibleElements(text, parseInt(num, 10));
+Alors("je vois {string} fois le {string} {string}", (num, element, text) => {
+  I.seeNumberOfVisibleElements(
+    `//${element}[contains(., "${text}")]`,
+    parseInt(num, 10)
+  );
 });
 
 Alors("je vois {string} suggestions", (num) => {

@@ -6,7 +6,7 @@ Fonctionnalité: Footer
   En tant que visiteur
   Je veux pouvoir consulter les fonctionnalités et pages présentes dans le footer
 
-  Scénario: Pages statiques
+  Scénario:
     Soit un utilisateur sur la page d'accueil
 
     Alors je vois "Besoin de plus d’information"
@@ -54,6 +54,6 @@ Fonctionnalité: Footer
     Alors je vois "Statistiques d’utilisation depuis le"
 
     Quand je clique sur "Contact"
-    Alors je vois "Vous pouvez joindre"
+    Alors je vois le bouton "les services du ministère du Travail"
+    Alors je vois "vous pouvez nous contacter"
     Alors le lien "codedutravailnumerique@travail.gouv.fr" pointe sur "mailto:"
-    Alors je vois le bouton "les services dédiés"

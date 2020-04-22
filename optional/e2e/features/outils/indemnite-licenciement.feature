@@ -8,6 +8,7 @@ Fonctionnalité: Outil - Indemnité de licenciement
 
 Scénario:
   Soit un utilisateur sur la page "outils/indemnite-licenciement"
+
   Alors je vois "Étapes"
   Alors je vois "Indemnité de licenciement"
   Alors je vois "permet d’estimer le montant de l’indemnité minimale de licenciement"
@@ -49,7 +50,7 @@ Scénario:
 
   Quand je renseigne "01/01/2000" dans le champ "la date de notification"
   Alors je vois "La date de notification doit se situer après la date d’entrée"
-  Quand je renseigne "02012020" dans le champ "la date de notification"
+  Quand je renseigne "02/01/2020" dans le champ "la date de notification"
   Alors je ne vois pas "La date de notification doit se situer après la date d’entrée"
 
   Quand je renseigne "01/01/2020" dans le champ "la date de sortie"
@@ -57,19 +58,29 @@ Scénario:
   Quand je renseigne "01/02/2020" dans le champ "la date de sortie"
   Alors je ne vois pas "La date de notification doit se situer avant la date de sortie"
 
-  Quand je scroll à "Période d’absence prolongée"
+
+  Alors je vois "Période d’absence prolongée"
+
   Quand je choisis "Oui"
   Alors je vois "ne sont pas des périodes à renseigner ci-après"
   Alors je vois "Quels sont le motif et la durée de ces absences"
-  Quand je pause le test
+  Alors je ne vois pas "Supprimer"
+  Alors je vois "1" fois le "label" "Motif"
+  Alors je vois "1" fois le "label" "Durée (en mois)"
+
+  Quand je clique sur "Ajouter une absence"
+  Alors je vois "2" fois le "label" "Motif"
+
   Quand je clique sur "Supprimer"
+  Alors je vois "1" fois le "label" "Motif"
+
+  Quand je scroll à "Période d’absence prolongée"
+  Quand je choisis "Non"
   Alors je ne vois pas "Quels sont le motif et la durée de ces absences"
 
-  Quand je choisis "Oui"
-  Alors je vois "1" fois "Motif"
-  Alors je vois "1" fois "Durée (en mois)"
-  Quand je clique sur "Ajouter une période"
-  Alors je vois "2" fois Motif"
-  Quand je clique sur "Supprimer"
-  Alors je vois "1" fois "Motif"
+  Quand je clique sur "Suivant"
 
+
+  Alors je vois "périodes d'alternance à temps plein et à temps partiel"
+  Quand je choisis "Non"
+  Alors je vois "Le salaire mensuel a-t-il été le même"

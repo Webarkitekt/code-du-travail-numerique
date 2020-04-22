@@ -20,6 +20,9 @@ exports.config = {
       restart: false,
       url: process.env.CODECEPT_BASEURL || "http://localhost:3000",
     },
+    FocusHelper: {
+      require: "./helpers/focus.js",
+    },
   },
   include: {
     I: "./steps_file.js",
@@ -33,7 +36,7 @@ exports.config = {
     steps: ["./step_definitions/global.js"],
   },
   plugins: {
-    pauseOnFail: {},
+    pauseOnFail: {},
     screenshotOnFail: {
       enabled: true,
     },
