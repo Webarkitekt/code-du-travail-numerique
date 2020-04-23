@@ -2152,7 +2152,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-
+                   
                   <a
                     class="c31"
                     href="/themes/8-depart-de-lentreprise"
@@ -2173,7 +2173,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-
+                   
                   <a
                     class="c31"
                     href="/themes/86-autres-departs"
@@ -2325,56 +2325,56 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       <p>
                         Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.
                       </p>
-
+                      
 
                       <p>
                         Lorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :
                       </p>
-
+                      
 
                       <ul>
-
+                        
 
                         <li>
-
+                          
 
                           <p>
                             Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;
                           </p>
-
+                          
 
                         </li>
-
+                        
 
                         <li>
-
+                          
 
                           <p>
                             Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.
                           </p>
-
+                          
 
                         </li>
-
+                        
 
                         <li>
-
+                          
 
                           <p>
                             Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.
                           </p>
-
+                          
 
                         </li>
-
+                        
 
                       </ul>
-
+                      
 
                       <p>
                         Lorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.
                       </p>
-
+                      
 
                       <p>
                         Pour plus d'informations, voir la fiche :
@@ -2385,7 +2385,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           Que devient le contrat du salarié au décès du particulier employeur ?
                         </a>
                       </p>
-
+                      
 
                       <p>
                         <em>
@@ -2398,7 +2398,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         >
                           Article L1233-3 du code du travail
                         </a>
-
+                        
 
                         <a
                           href="https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006900875&cidTexte=LEGITEXT000006072050"
@@ -2446,7 +2446,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           value=""
                         />
                       </span>
-
+                      
                     </div>
                   </div>
                 </div>
@@ -4954,7 +4954,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-
+                   
                   <a
                     class="c31"
                     href="/themes/8-depart-de-lentreprise"
@@ -4975,7 +4975,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-
+                   
                   <a
                     class="c31"
                     href="/themes/86-autres-departs"
@@ -5127,56 +5127,56 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       <p>
                         Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.
                       </p>
-
+                      
 
                       <p>
                         Lorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :
                       </p>
-
+                      
 
                       <ul>
-
+                        
 
                         <li>
-
+                          
 
                           <p>
                             Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;
                           </p>
-
+                          
 
                         </li>
-
+                        
 
                         <li>
-
+                          
 
                           <p>
                             Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.
                           </p>
-
+                          
 
                         </li>
-
+                        
 
                         <li>
-
+                          
 
                           <p>
                             Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.
                           </p>
-
+                          
 
                         </li>
-
+                        
 
                       </ul>
-
+                      
 
                       <p>
                         Lorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.
                       </p>
-
+                      
 
                       <p>
                         Pour plus d'informations, voir la fiche :
@@ -5187,7 +5187,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           Que devient le contrat du salarié au décès du particulier employeur ?
                         </a>
                       </p>
-
+                      
 
                       <p>
                         <em>
@@ -5200,7 +5200,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         >
                           Article L1233-3 du code du travail
                         </a>
-
+                        
 
                         <a
                           href="https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006900875&cidTexte=LEGITEXT000006072050"
@@ -5248,7 +5248,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           value=""
                         />
                       </span>
-
+                      
                     </div>
                   </div>
                 </div>

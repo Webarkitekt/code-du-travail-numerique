@@ -515,7 +515,7 @@ exports[`<Answer /> should renders 1`] = `
             <span
               class="c9"
             >
-              Source:
+              Source: 
               social groove
             </span>
             <span
@@ -544,7 +544,7 @@ exports[`<Answer /> should renders 1`] = `
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   html
                 </strong>
@@ -1287,7 +1287,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 fill="currentColor"
               />
             </svg>
-
+             
             <a
               class="c5"
               href="/themes/tag-1"
@@ -1308,7 +1308,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 fill="currentColor"
               />
             </svg>
-
+             
             <a
               class="c5"
               href="/themes/tag-2"
@@ -1358,7 +1358,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <span
               class="c18"
             >
-              Source:
+              Source: 
               social groove
             </span>
             <span
@@ -1387,7 +1387,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   html
                 </strong>
@@ -1954,7 +1954,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
             <span
               class="c9"
             >
-              Source:
+              Source: 
               social groove
             </span>
             <span
@@ -1983,7 +1983,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   html
                 </strong>
@@ -2929,7 +2929,7 @@ exports[`<Answer /> should renders related content 1`] = `
             <span
               class="c9"
             >
-              Source:
+              Source: 
               social groove
             </span>
             <span
@@ -3054,7 +3054,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 <div
                   class="c30"
                 >
-
+                  
                   <h3
                     class="c31 c32"
                   >
@@ -3157,19 +3157,7 @@ exports[`<Answer /> should renders related content 1`] = `
                   class="c30"
                 >
                   <span
-<<<<<<< HEAD
-<<<<<<< HEAD
                     class="sc-fznYue c40"
-=======
-<<<<<<< HEAD
-                    class="sc-fznYue c41"
-=======
-                    class="sc-fzokvW c40"
->>>>>>> test:Updated snapshotes
->>>>>>> test:Updated snapshotes
-=======
-                    class="sc-fznYue c40"
->>>>>>> test:Updated snapshot
                   >
                     Outils
                   </span>
@@ -3812,7 +3800,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
             <span
               class="c9"
             >
-              Source:
+              Source: 
               social groove
             </span>
             <span
@@ -3841,7 +3829,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   html
                 </strong>
@@ -4409,7 +4397,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             <span
               class="c9"
             >
-              Source:
+              Source: 
               social groove
             </span>
             <span
@@ -4438,7 +4426,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   indemnités
                 </strong>
@@ -5006,7 +4994,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             <span
               class="c9"
             >
-              Source:
+              Source: 
               social groove
             </span>
             <span
@@ -5604,7 +5592,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             <span
               class="c9"
             >
-              Source:
+              Source: 
               social groove
             </span>
             <span
