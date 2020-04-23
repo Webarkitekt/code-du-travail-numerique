@@ -14,6 +14,8 @@ import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 import { getVersions } from "./versions";
 
+import { addGlossary } from "../lib/addGlossary";
+
 const getBreadcrumbs = createThemer(themes);
 
 function flattenTags(tags = []) {
@@ -264,7 +266,10 @@ async function* cdtnDocumentsGen() {
         `/${getRouteBySource(SOURCES.SHEET_MT)}/${content.slug}`
       ),
       // eslint-disable-next-line no-unused-vars
-      sections: sections.map(({ description, text, ...section }) => section),
+      sections: sections.map(({ description, text, ...section }) => ({
+        ...section,
+        html: addGlossary(section.html),
+      })),
     };
   });
   logger.info("=== page ccn ===");

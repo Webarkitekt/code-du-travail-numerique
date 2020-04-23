@@ -1,6 +1,6 @@
-const glossary = require("../dataset/datafiller/glossary.data.json");
+const glossary = require("@socialgouv/datafiller-data/data/glossary.json");
 
-function addGlossary(htmlContent) {
+export function addGlossary(htmlContent) {
   const internalRefMap = new Map();
   const formatedContent = glossary.reduce((updatedContent, match) => {
     const { abbrs, title, definition, variants } = match;
@@ -11,12 +11,13 @@ function addGlossary(htmlContent) {
     const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
     const wordBoundaryStart = `(?:^|[^_/\\w${frDiacritics}-])`;
     const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
-    const patterns = [...new Set([title, ...variants])]
-      .map(
-        (term) =>
-          new RegExp(`${wordBoundaryStart}(${term})${wordBoundaryEnd}`, "gi")
-      )
-      .concat(abbrs.map((abbr) => new RegExp(`\\b(${abbr})\\b`, "g")));
+    const patterns = [...new Set([title, ...variants])].map(
+      (term) =>
+        new RegExp(`${wordBoundaryStart}(${term})${wordBoundaryEnd}`, "gi")
+    );
+    if (abbrs) {
+      patterns.concat(new RegExp(`\\b(${abbrs})\\b`, "g"));
+    }
 
     const formatedContent = Array.from(patterns).reduce((content, pattern) => {
       return content.replace(pattern, function (_, term) {
@@ -32,6 +33,7 @@ function addGlossary(htmlContent) {
     return formatedContent;
   }, htmlContent);
 
+  // console.log("CONSOLE LOG: addGlossary -> formatedContent", formatedContent);
   // we get ref id to replace pattern
   const finalContent = Array.from(internalRefMap).reduce((content, match) => {
     const [key, value] = match;
@@ -40,5 +42,3 @@ function addGlossary(htmlContent) {
 
   return finalContent;
 }
-
-module.exports = addGlossary;
