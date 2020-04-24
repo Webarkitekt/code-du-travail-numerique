@@ -200,6 +200,7 @@ async function* cdtnDocumentsGen() {
       const slug = slugify(title);
       fixReferences(answers.generic);
       answers.conventions.forEach(fixReferences);
+
       return {
         source: SOURCES.CONTRIBUTIONS,
         title,
@@ -207,7 +208,13 @@ async function* cdtnDocumentsGen() {
         breadcrumbs: getBreadcrumbs(`/${SOURCES.CONTRIBUTIONS}/${slug}`),
         description: (answers.generic && answers.generic.description) || title,
         text: (answers.generic && answers.generic.text) || title,
-        answers,
+        answers: {
+          ...answers,
+          generic: {
+            ...answers.generic,
+            markdown: addGlossary(answers.generic.markdown),
+          },
+        },
         excludeFromSearch: false,
       };
     }
@@ -277,6 +284,13 @@ async function* cdtnDocumentsGen() {
   yield ccnData.map(({ ...content }) => {
     return {
       ...content,
+      answers: {
+        ...content.answers,
+        answer: ((content.answers || []).answer || []).map((data) => ({
+          ...data,
+          answer: addGlossary(data.answer),
+        })),
+      },
       source: SOURCES.CCN_PAGE,
     };
   });
